@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  nextjs:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: nextjs15_dev
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+      - CHOKIDAR_USEPOLLING=true   # penting agar hot reload stabil di Docker
+    volumes:
+      - .:/app                     # sinkronkan file lokal ke container
+      - /app/node_modules          # hindari overwrite node_modules container
+    restart: unless-stopped         # container tetap hidup walau error
