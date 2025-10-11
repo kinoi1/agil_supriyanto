@@ -7,6 +7,7 @@ import Experience from "./components/experience";
 import Projects from "./components/projects";
 import Navbar from "./components/navbar";
 import Contact from "./components/contact";
+import Image from "next/image";
 
 const ModalContact = dynamic(() => import("./modal/contact"), {
   ssr: false,
@@ -22,7 +23,7 @@ export default function Home() {
         <div id="contact">
           <div className="flex justify-center mx-4 mt-[3rem]">
             <h1 className="bg-gradient-to-b from-white to-[#adadad] bg-clip-text text-transparent text-[max(48px,min(5vw,76px))] font-extrabold tracking-[-0.05em] leading-none text-center">
-              I'm Agil, Fullstack Developer
+              I&apos;m Agil, Fullstack Developer
             </h1>
           </div>
           <div className="text-[max(15px,min(2vw,762px))] text-grey mx-8 text-center mt-[3rem]">
@@ -104,7 +105,7 @@ export default function Home() {
       <ModalContact isOpen={open} onClose={() => setOpen(false)}>
         <div className="flex flex-row gap-[1rem] justify-center">
           <div className="flex flex-col justify-center items-center">
-            <img
+            <Image
               width="50"
               height="50"
               src="icon/instagram.png"
@@ -113,7 +114,7 @@ export default function Home() {
             <span className="mt-2">Instagram</span>
           </div>
           <div className="flex flex-col justify-center items-center">
-            <img
+            <Image
               width="50"
               height="50"
               src="icon/whatsapp.png"
@@ -122,7 +123,7 @@ export default function Home() {
             <span className="mt-2">Whatsapp</span>
           </div>
           <div className="flex flex-col justify-between items-center">
-            <img
+            <Image
               className="mt-2"
               width="50"
               height="50"

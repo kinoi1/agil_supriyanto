@@ -1,6 +1,7 @@
 "use client";
 import React, { useRef, useState, useEffect } from "react";
 import { gsap } from "gsap";
+import Image from "next/image";
 
 const HorizontalSlider: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -50,16 +51,17 @@ const HorizontalSlider: React.FC = () => {
 
     // ✅ cleanup GSAP agar tidak leak
     return () => ctx.current?.revert();
-  }, []);
+  }, [initialIndex, slideToIndex]);
 
   return (
     <div className="w-full overflow-hidden relative flex items-center justify-center py-5 flex flex-col">
       <div ref={containerRef} className="flex items-center">
         {items.map((item) => (
-          <img
+          <Image
             key={item.id}
             className="flex-shrink-0 w-3/4 sm:w-1/2 md:w-1/3 h-64 mx-4 rounded-xl object-contain p-4"
             src={item.src}
+            alt="Framework"
           />
         ))}
       </div>
