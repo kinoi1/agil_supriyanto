@@ -1,0 +1,1 @@
+self.__REACT_LOADABLE_MANIFEST='{"app/page.tsx -> ./modal/contact":{"id":9980,"files":["static/chunks/980.0e6522e3bc786db9.js"]}}';
