@@ -19,8 +19,8 @@
 
 # production
 # /build
-/build/server
-/build/cache
+build/server
+build/cache
 
 # misc
 .DS_Store
