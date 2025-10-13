@@ -8,7 +8,6 @@ const nextConfig: NextConfig = {
   },
   basePath: '/agil_supriyanto', // ganti dengan nama repository kamu
   assetPrefix: '/agil_supriyanto/',
-  trailingSlash: true,
 };
 
 export default nextConfig;
