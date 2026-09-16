@@ -1,12 +1,11 @@
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  distDir: 'dist',
-  output: 'export', // ini otomatis menggantikan `next export`
+  output: 'export', 
   images: {
-    unoptimized: true, // GitHub Pages tidak mendukung image optimizer bawaan Next.js
+    unoptimized: true, 
   },
-  basePath: '/agil_supriyanto', // ganti dengan nama repository kamu
+  basePath: '/agil_supriyanto', 
   assetPrefix: '/agil_supriyanto/',
 };
 
