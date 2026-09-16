@@ -1,7 +1,6 @@
 "use client";
 import React, { useRef, useState, useEffect, useLayoutEffect } from "react";
 import { gsap } from "gsap";
-import Image from "next/image";
 
 const HorizontalSlider: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -63,7 +62,9 @@ const HorizontalSlider: React.FC = () => {
           x: xOffset,
           duration: 1,
           ease: "power3.out",
-          onComplete: () => (hasAnimated.current = true),
+          onComplete: () => {
+            hasAnimated.current = true;
+          },
         }
       );
     });
