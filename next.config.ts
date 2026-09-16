@@ -5,8 +5,8 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true, 
   },
-  basePath: '/agil_supriyanto', 
-  assetPrefix: '/agil_supriyanto/',
+  basePath: 'https://agilsdev.my.id/', 
+  assetPrefix: 'https://agilsdev.my.id/',
 };
 
 export default nextConfig;
